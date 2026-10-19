@@ -1,0 +1,49 @@
+{
+  "skill_name": "ai-quality-scorecard",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Score this AI-generated marketing email against the default rubric. Brief it came from: 'Announce our new annual plan discount (15% off) to existing monthly subscribers. Tone: friendly, not salesy. Must include a clear CTA to the billing page.'\n\nGenerated output:\nSubject: You're going to love this.\n\nHi there,\n\nWe've got some huge news. Switch to an annual plan and save big — like, REALLY big. This is the kind of deal you tell your friends about.\n\nDon't wait, this offer won't last forever!\n\nCheers,\nThe Team\n\n(No link or button included.)",
+      "expected_output": "Scored dimension by dimension using the default rubric. Should flag: tone is off (salesy/hypey despite brief asking for not-salesy), the specific 15% discount is never stated (correctness/instruction adherence failure), and there's no CTA to the billing page despite it being an explicit requirement (structural completeness failure). Overall verdict should be 'Do not ship' or at best 'Ship with edits' given multiple dimensions below 3, with a clear biggest-risk flag.",
+      "files": [],
+      "expectations": [
+        "Tone dimension scored low with justification citing specific phrases like 'REALLY big' or 'tell your friends about' as evidence of salesy tone contradicting the brief",
+        "Instruction adherence or correctness dimension flags that the specific 15% figure is never mentioned",
+        "Structural completeness dimension flags the missing CTA/link to the billing page as a explicit brief requirement that wasn't met",
+        "Each score has a justification citing actual text from the output, not generic statements",
+        "Overall verdict is 'Do not ship' or 'Ship with edits', not 'Ship', given the missing CTA and instruction adherence failures",
+        "The verdict states which threshold rule triggered it",
+        "Biggest risk is specific (e.g., missing CTA means the email has no way to convert) not generic",
+        "A rewrite is offered, not force-generated"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Here's our custom rubric for AI-generated support macros: Empathy (1-5), Resolution Clarity (1-5), Policy Accuracy (1-5, hard-fail below 3). Score this AI-generated response against it.\n\nCustomer issue: Customer was charged twice for the same order due to a payment retry glitch.\n\nAI-generated response: 'Thanks for reaching out. Duplicate charges can happen sometimes with payment processing. I've issued a refund for one of the charges, which should appear in 5-7 business days. Let us know if you have other questions!'",
+      "expected_output": "Scored using the custom rubric's exact three dimensions (Empathy, Resolution Clarity, Policy Accuracy) — not the default rubric. Policy Accuracy should be scrutinized since the hard-fail threshold was explicitly called out; the response should be checked for whether a refund can actually be confirmed as issued (an AI response asserting an action was taken is a common failure mode) or whether this is a policy/accuracy concern worth flagging.",
+      "files": [],
+      "expectations": [
+        "Uses the exact three custom dimensions provided (Empathy, Resolution Clarity, Policy Accuracy) and does not blend in default-rubric dimensions like tone/originality/safety",
+        "Policy Accuracy is treated with the hard-fail-below-3 rule explicitly, per the custom rubric",
+        "Raises the concern that the AI response claims a refund 'has been issued' when it's unclear whether that action was actually verified or taken — a real risk in support macro generation",
+        "Empathy is scored with justification citing actual language ('Duplicate charges can happen sometimes' undercuts empathy by minimizing the issue)",
+        "Overall verdict follows the custom rubric's hard-fail logic rather than the default rubric's threshold",
+        "Biggest risk ties back to the policy accuracy concern about the unverified refund claim"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Quick gut check — is this AI-generated product description good to publish as-is? It was generated from our internal spec sheet for a stainless steel water bottle: 32oz, double-wall vacuum insulated, keeps drinks cold 24 hours / hot 12 hours, leak-proof lid, BPA-free.\n\nGenerated output: 'Stay hydrated in style with our 32oz stainless steel water bottle. Double-wall vacuum insulation keeps your drinks ice-cold for up to 24 hours or steaming hot for up to 12 — perfect for the gym, the office, or the trail. The leak-proof lid means you can toss it in your bag without worry, and it's completely BPA-free for safe, everyday use.'",
+      "expected_output": "This output is genuinely strong and accurately reflects every spec. The skill should score it well across dimensions and give a clear 'Ship' verdict without manufacturing artificial criticism to seem balanced.",
+      "files": [],
+      "expectations": [
+        "Correctness/relevance scored high since every claim (32oz, double-wall vacuum insulation, 24hr cold/12hr hot, leak-proof lid, BPA-free) is accurately reflected from the spec sheet",
+        "Overall verdict is 'Ship' given the output meets the default threshold (no dimension below 3, average >=4.0)",
+        "The skill does not manufacture a false weakness or invent unsupported criticism just to appear balanced",
+        "If any dimension scores below 5, the justification is genuine and specific rather than nitpicking",
+        "Biggest risk section either states there's no significant risk or names something genuinely minor, not fabricated",
+        "A rewrite is still offered per the skill flow, but not forced or implied to be necessary"
+      ]
+    }
+  ]
+}

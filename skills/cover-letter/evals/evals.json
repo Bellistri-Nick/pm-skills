@@ -1,0 +1,51 @@
+{
+  "skill_name": "cover-letter",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Can you write me a cover letter? I'm applying for a Senior PM role at Linear. No voice sample — just use what you think sounds right for a strong PM. Here's the JD and my resume.\n\nJOB DESCRIPTION — Senior Product Manager, Linear\nLinear is building the next generation of project management software for modern software teams. We care about craft, speed, and getting out of the way of the engineers and designers using our product.\n\nWe're looking for a Senior PM who:\n- Has deep experience building tools for software teams (dev tools, productivity, project management)\n- Thinks carefully about opinionated product decisions and can defend them\n- Cares intensely about product quality and the details of the user experience\n- Has shipped products with strong organic adoption, not just feature launches\n- Can work autonomously and doesn't need heavy process\n\nRESUME — JORDAN CHEN\njordan.chen@gmail.com | San Francisco, CA\n\nSenior PM — Notion (2021–Present)\n- Led the core editor experience for 2M+ daily active users\n- Shipped Notion AI integration that reached 500K activated users in 90 days\n- Cut editor load time by 40% through a cross-functional performance initiative\n- Drove adoption of database features from 28% to 61% of active workspaces over 18 months\n\nPM — Figma (2018–2021)\n- Owned the multiplayer infrastructure product, coordinating with 12 engineers across 3 teams\n- Launched Figma's commenting system used by 800K+ designers\n- Defined the v1 API spec for third-party plugin integrations, which became Figma's #1 driver of new account activation within 6 months of launch\n\nAPM — Google (2016–2018)\n- Supported launch of Google Docs offline mode\n- Ran discovery for mobile collaboration features\n\nEDUCATION: BS Computer Science, Stanford, 2016",
+      "expected_output": "A 3–4 paragraph cover letter under 400 words. Opens with something specific, not 'I'm excited to apply.' Connects experience directly to Linear's stated values (craft, speed, getting out of the way). Does not summarize the resume. Ends with a specific ask. Includes a hiring lens check.",
+      "files": [],
+      "expectations": [
+        "Opening does not start with 'I'm excited/thrilled/passionate' or a biographical summary",
+        "Letter references something specific about Linear's product philosophy, not just the company name",
+        "At least one specific metric or story from the resume is used — not a laundry list",
+        "The letter says something the resume doesn't (a perspective, an insight, a conviction)",
+        "Under 400 words",
+        "Close includes a specific ask, not 'please let me know if you have questions'",
+        "Hiring lens check is included with verdicts on recruiter scan, hiring manager read, and clarity of ask",
+        "Offer to revise is made"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I need a cover letter for a Group PM role at Stripe. The challenge: I've been a PM at B2C consumer apps my whole career and Stripe is very much enterprise/developer-focused. I know there's a fit gap — I want the letter to address it directly rather than pretend it isn't there. Here's everything:\n\nJOB DESCRIPTION — Group PM, Stripe\nWe're looking for a Group PM to lead our Billing and Invoicing product area. You'll own the roadmap for products used by hundreds of thousands of businesses worldwide. The right candidate has:\n- Experience with complex, high-stakes financial or transactional products\n- Proven ability to lead multiple PMs and coordinate across large engineering organizations\n- Deep empathy for developer and finance team users\n- Strong judgment on platform vs. product tradeoffs\n\nRESUME — PRIYA MEHTA\npriya.mehta@gmail.com | New York, NY\n\nGroup PM — Instagram (2020–Present)\n- Led a team of 4 PMs across Feed, Stories, and Reels discovery surfaces\n- Shipped personalization algorithm improvements that drove a 22% increase in session depth\n- Managed the transition from engagement-first to creator monetization metrics\n- Led a cross-org initiative that reduced content moderation false positive rate by 31%\n\nSenior PM — Spotify (2017–2020)\n- Owned Discover Weekly and personalized playlist products (180M users)\n- Shipped podcast recommendation engine, which drove 40% of new podcast listeners in its first quarter\n- Managed relationships with 20+ label and podcast partners on content strategy\n\nPM — Airbnb (2015–2017)\n- Launched host payout flow improvements that reduced support tickets by 28%\n- Ran discovery on pricing tools for hosts\n\nEDUCATION: MBA, Wharton 2015 | BA Economics, University of Michigan 2013",
+      "expected_output": "A cover letter that directly acknowledges the B2C-to-enterprise fit gap and makes a specific, credible case for why it doesn't disqualify the candidate. Does not pretend the gap doesn't exist. Uses real examples from the resume that translate across contexts (complex systems, financial flows, platform decisions). Hiring lens check included.",
+      "files": [],
+      "expectations": [
+        "The letter directly addresses the B2C-to-enterprise gap rather than avoiding it",
+        "Makes a specific case for transferable experience — not vague claims of adaptability",
+        "References at least one example from the resume that credibly maps to Stripe's context (e.g., Airbnb host payout flow, or managing complex cross-org systems)",
+        "Does not open with excitement or a biographical intro",
+        "Under 400 words",
+        "Hiring lens check assesses whether the gap framing lands as confident or defensive",
+        "Offer to revise is made"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write me a cover letter for a Staff PM role at Vercel. I've included a short voice sample — please match it closely, this is important to me.\n\nVOICE SAMPLE (from a strategy doc I wrote):\n\"The real problem isn't that teams don't have enough tools. It's that the tools they have don't talk to each other, so context lives in people's heads instead of the system. Every handoff is a lossy compression. That's the thing we're actually solving — not workflow, not productivity, not automation. Context fidelity across the full development cycle.\"\n\nJOB DESCRIPTION — Staff PM, Vercel\nVercel is building the platform for frontend development at scale. We're looking for a Staff PM to own our Developer Experience area — the CLI, local dev workflow, build system, and the feedback loops that make deploying feel instant.\n\nWe want someone who:\n- Has shipped developer tooling or infrastructure products at scale\n- Thinks in systems and has strong opinions about DX\n- Has operated at Staff or Principal level, influencing roadmap across multiple teams\n- Can drive alignment across engineering, design, and GTM without needing authority\n\nRESUME — MARCUS REED\nmarcus.reed@gmail.com | Remote\n\nStaff PM — Datadog (2021–Present)\n- Led developer experience roadmap across CLI, API, and SDK surfaces (used by 180K engineers)\n- Shipped unified observability onboarding that cut mean time to first alert from 4 days to 6 hours\n- Defined platform API strategy adopted by 3 partner teams, eliminating 40% of duplicate tooling\n- Led cross-team initiative that reduced P1 incident response time by 55% through better alerting UX\n\nSenior PM — HashiCorp (2018–2021)\n- Owned Terraform Cloud product from $0 to $28M ARR\n- Shipped self-serve onboarding used by 60K+ organizations\n- Drove the open-source to commercial conversion strategy that became the company's primary growth motion\n\nPM — GitHub (2015–2018)\n- Launched GitHub Actions beta with 12 enterprise design partners\n- Owned CI/CD integration surface for third-party tooling\n\nEDUCATION: BS Computer Science, Carnegie Mellon, 2015",
+      "expected_output": "A cover letter that closely matches the voice sample — same sentence rhythm, same direct declarative style, same tendency to reframe the problem before stating the solution. Should not read like a generic PM cover letter. Hiring lens check included.",
+      "files": [],
+      "expectations": [
+        "The letter's voice closely matches the sample: short declarative sentences, problem-reframing structure, absence of hedging or qualifications",
+        "The opening does not start with excitement or biographical summary — it should start with a framing or observation in Marcus's voice",
+        "References something specific about Vercel's product or the DX space, not just the company name",
+        "At least one specific metric or example from the resume is used",
+        "Under 400 words",
+        "Hiring lens check is included",
+        "Offer to revise is made"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "skill_name": "linkedin-reviewer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "hey can you review my linkedin profile? i'm applying to staff pm roles at ai startups and want to make sure it's good. here it is:\n\nHeadline: Senior Product Manager at Acme Corp\n\nAbout: I'm a passionate product manager with 8 years of experience building products that customers love. I have a track record of working cross-functionally to deliver results. I love solving hard problems and I'm always looking for new challenges.\n\nExperience:\nAcme Corp — Senior Product Manager (2021–present)\n- Led development of new analytics dashboard\n- Worked with engineering and design on feature roadmap\n- Managed relationships with key stakeholders\n- Helped improve retention metrics\n- Supported go-to-market efforts for new product launches\n\nPrevious Corp — Product Manager (2018–2021)\n- Owned the mobile app experience\n- Collaborated with cross-functional teams\n- Ran user research sessions\n- Shipped several major features\n\nFeatured: (nothing)\n\nSkills: Product Management, Roadmapping, Agile, JIRA, SQL, Stakeholder Management, User Research",
+      "expected_output": "Full panel review with section scores, three reviewer perspectives with specific quoted feedback, top 5 prioritized rewrites, and an offer to rewrite specific sections. Should call out weak/vague bullets, missing outcomes, generic about section, no featured section, and poor keyword coverage for AI roles.",
+      "files": [],
+      "assertions": [
+        "Output includes a section-by-section scoring table covering Headline, About, Experience, Featured, and Skills",
+        "Output includes all three reviewer perspectives: Recruiter, Hiring Manager, and Head of Product",
+        "Each reviewer gives a numeric score (e.g. X/10)",
+        "Output quotes or directly references specific text from the profile (e.g. 'I'm a passionate product manager' or 'Helped improve retention metrics')",
+        "Output includes a prioritized list of top rewrites or edits",
+        "Output identifies the lack of outcomes or metrics in experience bullets",
+        "Output flags that the About section is generic or uses filler language",
+        "Output identifies the missing Featured section as a gap",
+        "Output offers to rewrite specific sections"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I have a recruiter screen coming up next week for a Group PM role at a Series B AI company and I want to make sure my LinkedIn is dialed in before they look me up. Can you review it?\n\nHeadline: Group PM | AI Products & Platform | ex-Google, Stripe\n\nAbout: I build AI products that solve real business problems. At Google, I led the launch of an ML-powered search ranking feature that improved click-through rates by 22% across 400M daily active users. At Stripe, I owned the fraud detection product roadmap, reducing false positives by 34% while maintaining <0.1% fraud rate. Now I'm looking for my next challenge — ideally a company where AI is core to the product, not a bolt-on.\n\nExperience:\nStripe — Group Product Manager, Fraud & Risk (2020–2024)\n- Defined and owned the 3-year roadmap for Stripe's fraud detection platform\n- Led a team of 4 PMs, 2 data scientists, and 18 engineers across 3 time zones\n- Reduced false positive rate by 34% through ML model improvements, saving merchants ~$120M in blocked revenue annually\n- Launched real-time risk scoring API, now used by 60% of Stripe's enterprise customers\n- Partnered with legal and compliance to ship GDPR-compliant risk signals across EU markets\n\nGoogle — Senior Product Manager, Search (2016–2020)\n- Led 0→1 development of ML-powered ranking feature (BERT integration) across Google Search\n- Improved CTR by 22% on informational queries (400M DAU)\n- Managed external partnerships with 3 content providers for training data acquisition\n- Drove alignment across 6 engineering teams through weekly roadmap reviews\n\nFeatured: 1 article on AI product management on Medium (2022)\n\nSkills: Product Strategy, AI/ML Products, Roadmapping, Cross-functional Leadership, Risk & Fraud, Platform Products, SQL, Python, OKRs",
+      "expected_output": "Review should acknowledge this is a strong profile with real outcomes. Should still find specific improvement opportunities. Should not be uniformly critical — most section scores should be 7+ out of 10. Should cite specific strengths by quoting the profile.",
+      "files": [],
+      "assertions": [
+        "Output includes a section-by-section scoring table",
+        "Output includes all three reviewer perspectives: Recruiter, Hiring Manager, and Head of Product",
+        "Scores for Experience sections are 7 or higher out of 10 (reflecting the strong outcome-driven bullets)",
+        "Output acknowledges specific strengths with direct quotes or references from the profile",
+        "Output still identifies at least 2-3 specific improvement opportunities (not just generic praise)",
+        "Output includes a prioritized rewrite list",
+        "Output offers to rewrite specific sections"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I'm a PM at a fintech company, been doing this for 6 years, and I'm passively open to Staff or Principal PM roles. My LinkedIn feels stale but I don't know exactly what's wrong. Can you take a look?\n\nHeadline: Product Manager | Fintech | Payments | Boston\n\nAbout: Product manager with experience in financial services and payments technology. Skilled in working with engineering and design to ship products. Previous experience in consulting before transitioning to product.\n\nExperience:\nPaymentsCo — Product Manager (2019–present)\n- Led redesign of onboarding flow, resulting in 18% improvement in activation rate\n- Owned payments infrastructure roadmap for SMB segment ($40M ARR)\n- Drove adoption of new pricing model across 3 customer segments, increasing ARPU by 12%\n- Built and maintained relationships with key enterprise accounts\n- Managed backlog and sprint ceremonies for team of 8 engineers\n\nMcKinsey & Company — Business Analyst (2015–2019)\n- Worked on digital transformation projects for financial services clients\n- Supported product strategy engagements\n- Developed client presentations and recommendations\n\nFeatured: (empty)\nSkills: Fintech, Payments, Product Management, SQL, Agile, Roadmapping, Stakeholder Management, Figma",
+      "expected_output": "Should diagnose: headline lacks level signal, About is thin and leads with consulting background, experience bullets are mixed quality (some good metrics, some weak), McKinsey role needs reframing. Should offer concrete rewrites.",
+      "files": [],
+      "assertions": [
+        "Output includes a section-by-section scoring table",
+        "Output includes all three reviewer perspectives: Recruiter, Hiring Manager, and Head of Product",
+        "Output flags that the headline lacks level signal or seniority indicator for Staff/Principal roles",
+        "Output identifies the About section as underdeveloped or too thin",
+        "Output distinguishes between stronger bullets (with metrics) and weaker ones (task-oriented) in the PaymentsCo role",
+        "Output addresses how to reframe or improve the McKinsey/consulting background for PM audiences",
+        "Output includes a prioritized rewrite list",
+        "Output offers to rewrite specific sections"
+      ]
+    }
+  ]
+}

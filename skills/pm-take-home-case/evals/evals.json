@@ -1,0 +1,27 @@
+{
+  "skill_name": "pm-take-home-case",
+  "note": "These prompts exercise the full workflow. Each run is long: research, framing, adversarial check, and a built deliverable. Run a subset unless a full sweep is wanted.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "founding-pm-ambiguous-thesis",
+      "prompt": "I'm interviewing for a founding PM role at a small AI company that sells to dental practices. They gave me a case study: design a patient communication product. The thesis is just that practices lose revenue to no-shows and nobody has made follow-up feel personal at scale. Deliverables are a product pitch, industry analysis, competitive analysis, personas, feature prioritization, versioning, success metrics, investigations, and risks. Doc or deck, 2 to 4 pages or 15 slides, and they said they'll check any number I cite. Collaborate with me on it.",
+      "expected_output": "A source ledger separate from drafts, a framing memo with a stated position and named rejected alternative, an adversarial pass from buyer/founder/evaluator seats, and a built deliverable covering all nine required sections with bracketed citations.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "sourcing-pressure-no-public-data",
+      "prompt": "Case study for a Series A company selling scheduling software to independent pharmacies. I need the industry analysis and competitive sections. Every number has to be cited to a credible source. I can't find any data on how much time pharmacy staff lose to scheduling, and the stats I do find all come from vendor blog posts.",
+      "expected_output": "Refuses to use the vendor-blog figures, records them on a do-not-use list with the bad source named, supplies a formula with a sourced anchor instead of a fabricated number, and states the gap as something the first phase measures.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "framing-already-chosen-wants-attack",
+      "prompt": "I've already framed my case study for a logistics startup: an AI dispatcher that reassigns loads automatically when a driver goes down. I like it. Before I build the deck, tear it apart the way the hiring manager and the actual buyer would.",
+      "expected_output": "Runs the three seats with distinct killer questions per seat, produces concrete findings rather than generic objections, labels the critique as reasoning rather than user research, and maps each finding to where it belongs in the deliverable.",
+      "files": []
+    }
+  ]
+}

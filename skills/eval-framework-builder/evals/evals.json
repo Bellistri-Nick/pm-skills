@@ -1,0 +1,50 @@
+{
+  "skill_name": "eval-framework-builder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build an eval framework for us. We have an AI feature that generates marketing email subject lines and preview text from a campaign brief (audience, offer, tone guidelines, key message). This goes out to real customers — some sends are reviewed by a marketer first, but we're moving toward letting some segments send unreviewed. Known problems so far: subject lines sometimes overstate the offer (calling a 10% discount 'huge savings'), and the tone drifts off-brand when the brief is thin. We don't have any eval process today.",
+      "expected_output": "A full framework with 4-6 dimensions specific to subject lines/preview text (should include something like instruction adherence/offer accuracy and tone/brand fit given the stated failure modes), a 1-5 rubric with concrete anchors per dimension, a golden set structure with category proportions, and explicit pass/fail thresholds that treat overstated-offer as a hard-fail given it's customer-facing and moving toward unreviewed sends.",
+      "files": [],
+      "expectations": [
+        "At least one dimension directly addresses factual/offer accuracy, tied to the known 'overstates the offer' failure mode",
+        "At least one dimension addresses tone/brand fit, tied to the known tone-drift failure mode",
+        "Rubric anchors are specific to subject lines/preview text, not generic 1-5 quality language",
+        "Golden set structure includes the six standard categories (typical, edge case, known failure modes, adversarial, ambiguous, out-of-scope) or explains why one is omitted",
+        "Known failure modes category explicitly includes cases built from the overstatement and tone-drift problems",
+        "Pass/fail thresholds are concrete and checkable, not vague",
+        "Offer accuracy or a comparable correctness dimension is flagged as a hard-fail dimension given customer-facing, moving-to-unreviewed context",
+        "Judge prompt is offered, not force-generated",
+        "Open assumptions are noted since no existing eval process exists"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We built an internal tool that summarizes long customer support threads for our support agents before they respond. Agents always read the original thread if something looks off, so this is a lower-stakes internal aid, not customer-facing. We want an eval framework so we can compare two different prompt versions.",
+      "expected_output": "A framework calibrated for a lower-stakes, human-reviewed, internal use case — dimensions likely include correctness/grounding and completeness, but thresholds should be less strict than a customer-facing example, and the framework should be usable for A/B comparing two prompt versions specifically.",
+      "files": [],
+      "expectations": [
+        "Dimensions are relevant to summarization specifically (e.g., grounding/faithfulness to the source thread, completeness of key points, actionability for the agent)",
+        "The framework explicitly reflects that this is lower-stakes/human-reviewed by calibrating thresholds less strictly than a customer-facing feature would warrant",
+        "Golden set guidance addresses that this framework will be used to compare two prompt versions (e.g., running the same golden set against both)",
+        "Thresholds are still concrete and checkable, not just 'less strict' without specifics",
+        "Hard-fail dimensions, if any, are limited given the human-in-the-loop safety net (not over-applying safety strictness meant for unreviewed customer-facing output)",
+        "Judge prompt offer is made"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Build me an eval framework for our AI-generated product descriptions on our e-commerce site, and go ahead and give me the judge prompt too so I can start automating scoring right away.",
+      "expected_output": "A full framework, and since the judge prompt was explicitly requested up front, it should be included in the same response rather than offered and held back for a follow-up.",
+      "files": [],
+      "expectations": [
+        "Full framework delivered: dimensions, rubric with anchors, golden set structure, thresholds",
+        "Judge prompt is generated directly in this response since it was explicitly pre-requested, not just offered",
+        "Judge prompt incorporates the actual rubric anchors from the framework, not a generic scoring prompt",
+        "Judge prompt specifies a structured output format for aggregation",
+        "A caveat is included that the judge prompt needs periodic spot-checking against human scores",
+        "Dimensions are specific to product descriptions (e.g., factual accuracy about the product, compliance with required disclosures, tone)"
+      ]
+    }
+  ]
+}
